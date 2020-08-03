@@ -17,7 +17,7 @@ def predict():
     text = str(request.args['text'])
     vectorized_text = vectorizer.transform([text])
     prediction = model.predict(vectorized_text)
-    d['result'] = "It is a " + str(prediction[0]) + " sentence"
+    d['result'] = "It is a " + str(prediction[0]) + " review"
     # value returned wull be of name **result**
     #return render_template('result.html', result = result)
     return jsonify(d)
